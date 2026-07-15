@@ -1,0 +1,57 @@
+<%- include('partials/head', { title, currentPage }) %>
+
+<button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+  <span class="zh">EN</span><span class="en">中</span>
+</button>
+
+<div class="page-wrapper">
+  <%- include('partials/sidebar') %>
+
+  <main class="main-content">
+    <nav class="section-nav">
+      <a href="/"><span class="zh">关于</span><span class="en">About</span></a>
+      <a href="/blog" class="active"><span class="zh">博客</span><span class="en">Blog</span></a>
+      <a href="/publications"><span class="zh">发表</span><span class="en">Publications</span></a>
+      <a href="/honors"><span class="zh">荣誉</span><span class="en">Honors</span></a>
+    </nav>
+
+    <%
+    const filteredPosts = activeCategory ? posts.filter(p => p.category === activeCategory) : posts;
+    %>
+
+    <section class="content-section">
+      <h2 class="section-title"><span class="zh">博客</span><span class="en">Blog</span></h2>
+      <div class="filter-bar">
+        <button class="filter-btn <%= !activeCategory ? 'active' : '' %>" onclick="filterCategory('')">全部</button>
+        <% getCategoryList().forEach(function(cat) { %>
+          <button class="filter-btn <%= activeCategory === cat ? 'active' : '' %>"
+                  onclick="filterCategory('<%= cat %>')"><%= cat %></button>
+        <% }) %>
+      </div>
+
+      <div class="blog-list-entries">
+        <% filteredPosts.forEach(function(post) { %>
+          <a href="/blog/<%= post.slug %>" class="blog-list-entry">
+            <span class="blog-list-date"><%= post.date.toISOString().slice(0, 10) %></span>
+            <div class="blog-list-body">
+              <div class="blog-list-tags">
+                <span class="blog-list-tag"><%= post.category %></span>
+                <% post.tags.forEach(function(tag) { %><span class="blog-list-tag"><%= tag %></span><% }) %>
+              </div>
+              <div class="blog-list-entry-title"><%= post.title %></div>
+              <% if (post.excerpt) { %><div class="blog-list-excerpt"><%= post.excerpt %></div><% } %>
+              <div class="blog-list-meta"><%= post.readTime %> min read</div>
+            </div>
+          </a>
+        <% }) %>
+        <% if (filteredPosts.length === 0) { %>
+          <div style="text-align:center;padding:48px 0;color:var(--text-light);">
+            <p><span class="zh">该分类下暂无文章</span><span class="en">No posts in this category</span></p>
+          </div>
+        <% } %>
+      </div>
+    </section>
+  </main>
+</div>
+
+<%- include('partials/scripts', { currentPage }) %>

@@ -1,0 +1,32 @@
+{
+  "name": "personal-academic-homepage",
+  "version": "1.0.0",
+  "description": "A lightweight personal academic homepage and blog system built with Express + EJS + Markdown. Zero database, easy to customize.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/personal-academic-homepage.git"
+  },
+  "keywords": ["personal-website", "academic-homepage", "blog", "express", "ejs", "markdown"],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/personal-academic-homepage/issues"
+  },
+  "homepage": "https://github.com/yourusername/personal-academic-homepage#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
+    "marked": "^18.0.6",
+    "marked-highlight": "^2.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

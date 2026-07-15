@@ -1,0 +1,46 @@
+<%- include('partials/head', { title, currentPage }) %>
+
+<button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+  <span class="zh">EN</span><span class="en">中</span>
+</button>
+
+<div class="page-wrapper">
+  <%- include('partials/sidebar') %>
+
+  <main class="main-content">
+    <nav class="section-nav">
+      <a href="/"><span class="zh">关于</span><span class="en">About</span></a>
+      <a href="/blog"><span class="zh">博客</span><span class="en">Blog</span></a>
+      <a href="/publications" class="active"><span class="zh">发表</span><span class="en">Publications</span></a>
+      <a href="/honors"><span class="zh">荣誉</span><span class="en">Honors</span></a>
+    </nav>
+
+    <section class="content-section">
+      <h2 class="section-title"><span class="zh">发表与科研</span><span class="en">Publications &amp; Research</span></h2>
+      <div class="pub-list">
+        <% items.forEach(function(pub) { %>
+          <div class="pub-entry">
+            <% if (pub.title) { %>
+              <div class="pub-entry-title"><%= pub.title %></div>
+            <% } else { %>
+              <div class="pub-entry-title"><span class="zh"><%= pub.title_zh %></span><span class="en"><%= pub.title_en %></span></div>
+            <% } %>
+            <% if (pub.venue) { %>
+              <div class="pub-entry-venue"><%= pub.venue %></div>
+            <% } else if (pub.venue_zh) { %>
+              <div class="pub-entry-venue"><span class="zh"><%= pub.venue_zh %></span><span class="en"><%= pub.venue_en %></span></div>
+            <% } %>
+            <% if (pub.doi) { %>
+              <div class="pub-entry-doi">DOI: <a href="<%= pub.link || 'https://doi.org/' + pub.doi %>" target="_blank" rel="noopener"><%= pub.doi %></a></div>
+            <% } %>
+            <% if (pub.summary_zh) { %>
+              <div class="pub-entry-doi"><span class="zh"><%= pub.summary_zh %></span><span class="en"><%= pub.summary_en %></span></div>
+            <% } %>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+</div>
+
+<%- include('partials/scripts', { currentPage }) %>

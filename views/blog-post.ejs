@@ -1,0 +1,37 @@
+<%- include('partials/head', { title, currentPage }) %>
+
+<button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+  <span class="zh">EN</span><span class="en">中</span>
+</button>
+
+<main class="blog-page">
+  <a href="/blog" class="back-link">← <span class="zh">返回博客列表</span><span class="en">Back to Blog</span></a>
+
+  <article>
+    <header class="blog-page-header">
+      <h1 class="blog-page-title"><%= post.title %></h1>
+      <div class="blog-page-meta">
+        <span><%= post.date.toISOString().slice(0, 10) %></span>
+        <span>·</span>
+        <span><%= post.category %></span>
+        <span>·</span>
+        <span><%= post.readTime %> min read</span>
+      </div>
+    </header>
+
+    <% if (post.headings && post.headings.length > 0) { %>
+      <nav class="blog-page-toc">
+        <% post.headings.forEach(function(h) { %><a href="#<%= h.anchor %>"><%= h.title %></a><% }) %>
+      </nav>
+    <% } %>
+
+    <div class="post-body"><%- bodyHtml %></div>
+
+    <nav class="post-nav">
+      <span><% if (prevPost) { %><a href="/blog/<%= prevPost.slug %>">← <%= prevPost.title %></a><% } %></span>
+      <span><% if (nextPost) { %><a href="/blog/<%= nextPost.slug %>"><%= nextPost.title %> →</a><% } %></span>
+    </nav>
+  </article>
+</main>
+
+<%- include('partials/scripts', { currentPage }) %>

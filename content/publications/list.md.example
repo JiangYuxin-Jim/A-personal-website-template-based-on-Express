@@ -1,0 +1,33 @@
+---
+section: publications
+
+# 每条记录有两种写法：
+#
+# 纯英文论文（无中英文切换）:
+#   title  - 论文标题
+#   venue  - 期刊/会议
+#   doi    - DOI 号（可选）
+#   link   - 链接（可选）
+#
+# 中英双语条目:
+#   title_zh / title_en
+#   venue_zh / venue_en
+#   summary_zh / summary_en  — 用于项目类，替代 venue
+
+items:
+
+  - title: "A Soft Voting Ensemble Model for Hotel Revenue Prediction"
+    venue: "International Journal of Economics, Finance and Management Sciences, 2024"
+    doi: "10.11648/j.ijefm.20241205.13"
+    link: "https://doi.org/10.11648/j.ijefm.20241205.13"
+
+  - title_zh: "中文论文标题"
+    title_en: "English Paper Title"
+    venue_zh: "《中文期刊名》，2025"
+    venue_en: "English Journal Name, 2025"
+
+  - title_zh: "科研项目"
+    title_en: "Research Projects"
+    summary_zh: "项目描述，如：国家级大创 2 项 · 软件著作权 6 项"
+    summary_en: "Project description: 2 National Projects · 6 Software Copyrights"
+---
