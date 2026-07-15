@@ -359,6 +359,7 @@ a:hover { color: var(--accent-hover); }
 .pub-entry-doi {
   font-size: 12px;
   font-family: var(--font-mono);
+  word-break: break-all;
 }
 
 /* ---- Honors / Experience ---- */
