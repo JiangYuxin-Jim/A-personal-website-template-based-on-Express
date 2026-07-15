@@ -132,20 +132,9 @@ function getPostBySlug(slug) {
 }
 
 // --- Categories — add new categories here (single source of truth) ---
-const CATEGORIES = [
-  { name: '技术文章', css: 'cat-tech' },
-  { name: '项目实战', css: 'cat-project' },
-  { name: '教程笔记', css: 'cat-tutorial' },
-];
+const CATEGORIES = ['技术文章', '项目实战', '教程笔记'];
 
-function getCategoryClass(category) {
-  const found = CATEGORIES.find(c => c.name === category);
-  return found ? found.css : 'cat-internship';
-}
-
-function getCategoryList() {
-  return CATEGORIES.map(c => c.name);
-}
+app.locals.getCategoryList = () => CATEGORIES;
 
 // --- Content loaders — reads markdown files from content/ directories ---
 function loadContentFile(filePath) {
@@ -177,9 +166,6 @@ function loadExperience() {
 
 // Make helpers available in templates
 app.locals.site = siteConfig;
-app.locals.getCategoryClass = getCategoryClass;
-app.locals.CATEGORIES = CATEGORIES;
-app.locals.getCategoryList = getCategoryList;
 
 // ==========================================
 // Routes
