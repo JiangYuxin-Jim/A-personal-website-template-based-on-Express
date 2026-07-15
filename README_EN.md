@@ -158,12 +158,8 @@ Write your content here with full Markdown support...
 **To add or change categories**, edit the `CATEGORIES` array in `app.js`:
 
 ```js
-const CATEGORIES = [
-  { name: '技术文章', css: 'cat-tech' },
-  { name: '项目实战', css: 'cat-project' },
-  { name: '教程笔记', css: 'cat-tutorial' },
-  // Add more categories here...
-];
+const CATEGORIES = ['技术文章', '项目实战', '教程笔记'];
+// Just add new category names to the array
 ```
 
 ### Step 4: Update Experience

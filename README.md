@@ -158,12 +158,8 @@ excerpt: 显示在博客列表中的简短摘要（可选）
 **添加或修改分类**，编辑 `app.js` 中的 `CATEGORIES` 数组：
 
 ```js
-const CATEGORIES = [
-  { name: '技术文章', css: 'cat-tech' },
-  { name: '项目实战', css: 'cat-project' },
-  { name: '教程笔记', css: 'cat-tutorial' },
-  // 在这里添加更多分类...
-];
+const CATEGORIES = ['技术文章', '项目实战', '教程笔记'];
+// 直接添加新分类名称即可
 ```
 
 ### 第四步：更新经历
