@@ -1,33 +1,41 @@
 ---
 section: publications
 
-# 每条记录有两种写法：
+# "发表与获奖"页面 (Publications & Awards) — 论文、科研、获奖
+# 按 year 降序自动排列，每条 year 必填
 #
-# 纯英文论文（无中英文切换）:
-#   title  - 论文标题
-#   venue  - 期刊/会议
-#   doi    - DOI 号（可选）
-#   link   - 链接（可选）
+# 纯英文论文（无中英切换）:
+#   year / title / venue / doi / link
 #
 # 中英双语条目:
-#   title_zh / title_en
-#   venue_zh / venue_en
-#   summary_zh / summary_en  — 用于项目类，替代 venue
+#   year / title_zh / title_en / venue_zh / venue_en
+#
+# 项目或获奖类（无 venue，用 summary）:
+#   year / title_zh / title_en / summary_zh / summary_en
 
 items:
 
-  - title: "Example Paper Title: A Novel Approach to Something"
-    venue: "Journal of Examples, 2025"
-    doi: "10.xxxx/example.2025"
-    link: "https://doi.org/10.xxxx/example.2025"
-
-  - title_zh: "示例中文论文标题"
+  - year: "2025"
+    title_zh: "示例论文中文标题"
     title_en: "Example Paper Title in English"
-    venue_zh: "《示例期刊》，2024"
-    venue_en: "Example Journal, 2024"
+    venue_zh: "《示例期刊》"
+    venue_en: "Example Journal"
 
-  - title_zh: "项目经历"
-    title_en: "Projects"
-    summary_zh: "在这里描述你的项目经历，例如：主持国家级项目 2 项 · 参与开源项目若干"
-    summary_en: "Describe your projects here, e.g.: Led 2 national projects · Contributed to open source"
+  - year: "2024"
+    title: "English-Only Paper Title"
+    venue: "Journal Name"
+    doi: "10.xxxx/xxxxx"
+    link: "https://doi.org/..."
+
+  - year: "2025"
+    title_zh: "科研项目"
+    title_en: "Research Projects"
+    summary_zh: "在这里描述你的科研项目和成果"
+    summary_en: "Describe your research projects and achievements here"
+
+  - year: "2025"
+    title_zh: "获奖荣誉"
+    title_en: "Awards & Honors"
+    summary_zh: "在这里列出你的获奖和荣誉"
+    summary_en: "List your awards and honors here"
 ---

@@ -361,17 +361,20 @@ a:hover { color: var(--accent-hover); }
   font-family: var(--font-mono);
 }
 
-/* ---- Honors ---- */
+/* ---- Honors / Experience ---- */
 .honor-list { display: flex; flex-direction: column; gap: 12px; }
 
 .honor-entry {
   display: flex;
   gap: 16px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border-light);
+  padding: 14px 18px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  transition: background 0.15s;
 }
 
-.honor-entry:last-child { border-bottom: none; }
+.honor-entry:hover { background: var(--card-hover); }
 
 .honor-entry-year {
   font-family: var(--font-mono);

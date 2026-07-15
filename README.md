@@ -53,11 +53,11 @@ npm start
 │   ├── blog/
 │   │   ├── hello-world.md  # 示例博客文章
 │   │   └── TEMPLATE.md.example  # 博客文章模板
-│   ├── honors/
-│   │   ├── list.md         # 荣誉与经历
+│   ├── experience/
+│   │   ├── list.md         # 教育背景与经历
 │   │   └── list.md.example # 文件模板参考
 │   ├── publications/
-│   │   ├── list.md         # 论文发表与科研项目
+│   │   ├── list.md         # 论文发表与获奖
 │   │   └── list.md.example # 文件模板参考
 │   └── images/
 │       ├── README.md       # 图片使用说明
@@ -166,36 +166,45 @@ const CATEGORIES = [
 ];
 ```
 
-### 第四步：更新荣誉与经历
+### 第四步：更新经历
 
-编辑 **`content/honors/list.md`**：
+编辑 **`content/experience/list.md`**：
 
 ```yaml
 items:
   - year: "2026"
-    title_zh: "荣誉或经历的中文标题"
+    title_zh: "经历的中文标题"
     title_en: "English Title"
     desc_zh: "中文描述（可选）"
     desc_en: "English description (optional)"
 ```
 
-### 第五步：更新论文发表
+### 第五步：更新发表与获奖
 
-编辑 **`content/publications/list.md`**：
+编辑 **`content/publications/list.md`**（按 year 降序自动排列）：
 
 ```yaml
 # 单语言论文：
 items:
-  - title: "Paper Title"
-    venue: "Journal Name, 2025"
+  - year: "2025"
+    title: "Paper Title"
+    venue: "Journal Name"
     doi: "10.xxxx/example"
     link: "https://doi.org/10.xxxx/example"
 
 # 双语条目：
-  - title_zh: "中文论文标题"
+  - year: "2025"
+    title_zh: "中文论文标题"
     title_en: "English Paper Title"
-    venue_zh: "《期刊名》，2025"
-    venue_en: "Journal Name, 2025"
+    venue_zh: "《期刊名》"
+    venue_en: "Journal Name"
+
+# 获奖类（用 summary 替代 venue）：
+  - year: "2025"
+    title_zh: "获奖荣誉"
+    title_en: "Awards & Honors"
+    summary_zh: "国家奖学金 · 竞赛奖项"
+    summary_en: "National Scholarship"
 ```
 
 ### 第六步：放上你的照片
@@ -220,8 +229,8 @@ items:
 | `/` | 首页（关于） | `content/about/about.md` |
 | `/blog` | 博客列表 | `content/blog/*.md` |
 | `/blog/:slug` | 博客详情 | 对应博客 markdown 文件 |
-| `/publications` | 论文发表 | `content/publications/list.md` |
-| `/honors` | 荣誉经历 | `content/honors/list.md` |
+| `/publications` | 发表与获奖 | `content/publications/list.md` |
+| `/experience` | 经历 | `content/experience/list.md` |
 
 ## 🚢 部署
 

@@ -8,12 +8,7 @@
   <%- include('partials/sidebar') %>
 
   <main class="main-content">
-    <nav class="section-nav">
-      <a href="/" class="active"><span class="zh">关于</span><span class="en">About</span></a>
-      <a href="/blog"><span class="zh">博客</span><span class="en">Blog</span></a>
-      <a href="/publications"><span class="zh">发表</span><span class="en">Publications</span></a>
-      <a href="/honors"><span class="zh">荣誉</span><span class="en">Honors</span></a>
-    </nav>
+    <%- include('partials/nav', { currentPage }) %>
 
     <section class="content-section">
       <div class="about-text zh"><%- aboutZhHtml %></div>

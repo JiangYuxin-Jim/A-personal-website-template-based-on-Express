@@ -166,11 +166,12 @@ function loadAbout() {
 
 function loadPublications() {
   const file = loadContentFile(path.join(__dirname, 'content', 'publications', 'list.md'));
-  return file ? (file.items || []) : [];
+  if (!file || !file.items) return [];
+  return file.items.sort((a, b) => (b.year || '0').localeCompare(a.year || '0'));
 }
 
-function loadHonors() {
-  const file = loadContentFile(path.join(__dirname, 'content', 'honors', 'list.md'));
+function loadExperience() {
+  const file = loadContentFile(path.join(__dirname, 'content', 'experience', 'list.md'));
   return file ? (file.items || []) : [];
 }
 
@@ -204,12 +205,12 @@ app.get('/publications', (req, res) => {
   });
 });
 
-// Honors page
-app.get('/honors', (req, res) => {
-  res.render('honors', {
-    title: 'Honors — ' + siteConfig.name,
-    currentPage: 'honors',
-    items: loadHonors(),
+// Experience page
+app.get('/experience', (req, res) => {
+  res.render('experience', {
+    title: 'Experience — ' + siteConfig.name,
+    currentPage: 'experience',
+    items: loadExperience(),
   });
 });
 

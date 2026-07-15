@@ -8,15 +8,10 @@
   <%- include('partials/sidebar') %>
 
   <main class="main-content">
-    <nav class="section-nav">
-      <a href="/"><span class="zh">关于</span><span class="en">About</span></a>
-      <a href="/blog"><span class="zh">博客</span><span class="en">Blog</span></a>
-      <a href="/publications"><span class="zh">发表</span><span class="en">Publications</span></a>
-      <a href="/honors" class="active"><span class="zh">荣誉</span><span class="en">Honors</span></a>
-    </nav>
+    <%- include('partials/nav', { currentPage }) %>
 
     <section class="content-section">
-      <h2 class="section-title"><span class="zh">荣誉与经历</span><span class="en">Honors &amp; Experience</span></h2>
+      <h2 class="section-title"><span class="zh">经历</span><span class="en">Experience</span></h2>
       <div class="honor-list">
         <% items.forEach(function(h) { %>
           <div class="honor-entry">

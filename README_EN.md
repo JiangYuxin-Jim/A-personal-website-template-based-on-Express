@@ -53,11 +53,11 @@ Open `http://localhost:3000` in your browser.
 │   ├── blog/
 │   │   ├── hello-world.md  # Example blog post
 │   │   └── TEMPLATE.md.example  # Blog post template
-│   ├── honors/
-│   │   ├── list.md         # Honors & experiences
+│   ├── experience/
+│   │   ├── list.md         # Education & experience
 │   │   └── list.md.example # Template reference
 │   ├── publications/
-│   │   ├── list.md         # Publications & research projects
+│   │   ├── list.md         # Publications & awards
 │   │   └── list.md.example # Template reference
 │   └── images/
 │       ├── README.md       # Image usage guide
@@ -166,36 +166,45 @@ const CATEGORIES = [
 ];
 ```
 
-### Step 4: Update Honors & Experiences
+### Step 4: Update Experience
 
-Edit **`content/honors/list.md`**:
+Edit **`content/experience/list.md`**:
 
 ```yaml
 items:
   - year: "2026"
-    title_zh: "荣誉或经历的中文标题"
+    title_zh: "经历的中文标题"
     title_en: "English Title"
     desc_zh: "中文描述（可选）"
     desc_en: "English description (optional)"
 ```
 
-### Step 5: Update Publications
+### Step 5: Update Publications & Awards
 
-Edit **`content/publications/list.md`**:
+Edit **`content/publications/list.md`** (sorted by year descending):
 
 ```yaml
 # Single-language paper:
 items:
-  - title: "Paper Title"
-    venue: "Journal Name, 2025"
+  - year: "2025"
+    title: "Paper Title"
+    venue: "Journal Name"
     doi: "10.xxxx/example"
     link: "https://doi.org/10.xxxx/example"
 
 # Bilingual entry:
-  - title_zh: "中文论文标题"
+  - year: "2025"
+    title_zh: "中文论文标题"
     title_en: "English Paper Title"
-    venue_zh: "《期刊名》，2025"
-    venue_en: "Journal Name, 2025"
+    venue_zh: "《期刊名》"
+    venue_en: "Journal Name"
+
+# Awards (use summary instead of venue):
+  - year: "2025"
+    title_zh: "获奖荣誉"
+    title_en: "Awards & Honors"
+    summary_zh: "国家奖学金 · 竞赛奖项"
+    summary_en: "National Scholarship"
 ```
 
 ### Step 6: Add Your Profile Photo
@@ -220,8 +229,8 @@ Your blog posts support full Markdown with syntax highlighting:
 | `/` | Home (About) | `content/about/about.md` |
 | `/blog` | Blog List | `content/blog/*.md` |
 | `/blog/:slug` | Blog Post | Individual blog markdown file |
-| `/publications` | Publications | `content/publications/list.md` |
-| `/honors` | Honors & Experience | `content/honors/list.md` |
+| `/publications` | Publications & Awards | `content/publications/list.md` |
+| `/experience` | Experience | `content/experience/list.md` |
 
 ## 🚢 Deployment
 
