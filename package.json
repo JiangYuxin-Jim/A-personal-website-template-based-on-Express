@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/personal-academic-homepage.git"
+    "url": "git+https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express.git"
   },
   "keywords": ["personal-website", "academic-homepage", "blog", "express", "ejs", "markdown"],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourusername/personal-academic-homepage/issues"
+    "url": "https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express/issues"
   },
-  "homepage": "https://github.com/yourusername/personal-academic-homepage#readme",
+  "homepage": "https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express#readme",
   "dependencies": {
     "ejs": "^6.0.1",
     "express": "^5.2.1",

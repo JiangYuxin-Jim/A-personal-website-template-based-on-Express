@@ -24,8 +24,8 @@ A lightweight, bilingual (Chinese/English) personal academic homepage and blog s
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/personal-academic-homepage.git
-cd personal-academic-homepage
+git clone https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express.git
+cd A-personal-website-template-based-on-Express
 
 # Install dependencies
 npm install
@@ -300,4 +300,4 @@ Edit the `<nav class="section-nav">` sections in the view files under `views/`.
 
 ---
 
-💡 **Having trouble?** [Open an issue](https://github.com/yourusername/personal-academic-homepage/issues) — we're happy to help!
+💡 **Having trouble?** [Open an issue](https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express/issues) — we're happy to help!

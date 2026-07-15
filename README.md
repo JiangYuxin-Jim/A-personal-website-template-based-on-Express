@@ -24,8 +24,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/personal-academic-homepage.git
-cd personal-academic-homepage
+git clone https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express.git
+cd A-personal-website-template-based-on-Express
 
 # 安装依赖
 npm install
@@ -300,4 +300,4 @@ MIT — 自由使用和修改，打造你自己的个人主页。
 
 ---
 
-💡 **遇到问题？** [提交 Issue](https://github.com/yourusername/personal-academic-homepage/issues)，我们很乐意帮忙！
+💡 **遇到问题？** [提交 Issue](https://github.com/JiangYuxin-Jim/A-personal-website-template-based-on-Express/issues)，我们很乐意帮忙！
